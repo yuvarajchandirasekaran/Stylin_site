@@ -17,6 +17,7 @@
 body {
     background-color: @secondary-color;
     font-family: @raleway;
+    overflow-x: hidden;
 }
 
 .flex {
@@ -31,6 +32,7 @@ img {
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 li {
@@ -62,6 +64,9 @@ input {
                 justify-content: space-between;
                 align-items: center;
 
+                @media screen and (max-width:1024px){
+                    max-width: 960px;
+                }
                 .hamburg-icon {
                     display: none;
 
@@ -192,7 +197,9 @@ input {
                 margin: 0 auto;
                 justify-content: space-between;
                 align-items: center;
-
+                @media screen and (max-width:1024px){
+                    max-width: 948px;
+                }
                 li {
                     a {
                         padding: 11px 0;
@@ -204,15 +211,16 @@ input {
                 }
 
                 li:not(:last-child) {
+                    position: relative;
                     &:after {
                         content: "";
                         background-color: black;
                         padding: 2px;
                         display: inline-block;
                         border-radius: 50%;
-                        position: relative;
-                        top: -3px;
-                        right: -20px;
+                        position: absolute;
+                        top: 45%;
+                        right: -25px;
                     }
                 }
 
@@ -222,6 +230,270 @@ input {
 
                 .closeouts {
                     color: #B20000;
+                }
+            }
+        }
+    }
+
+    .inner-container {
+        .hompage-banner {
+            .banner1 {
+                max-width: 1644px;
+                margin: 10px auto;
+            }
+
+            .banner2 {
+                max-width: 1338px;
+                margin: 0 auto;
+                padding-top: 24px;
+                padding-bottom: 54px;
+
+                .banner-wrapper {
+                    margin: 0 -10px;
+
+                    &>div {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+        .carousel {}
+
+        .featured-products {
+            margin: 40px 0 57px;
+
+            .column {
+                background-color: #EFEFEF;
+
+                .item-container {
+                    max-width: 1184px;
+                    margin: 0 auto;
+                    padding: 50px 0;
+
+                    .item-wrapper {
+                        margin: 0 -27px;
+
+                        &>div {
+                            margin: 0 27px;
+                        }
+                        .item-left{
+                            width: 450px;
+                            height: 580px;  
+                        }
+                        .item-right {
+                            padding: 28px 0 18px;
+
+                            .description {
+                                .heading {
+                                    font-size: 30px;
+                                    font-family: @raleway;
+                                    line-height: 32px;
+                                    color: @primary-color;
+                                }
+
+                                .desc {
+                                    font-size: 18px;
+                                    font-family: @karla;
+                                    line-height: 24px;
+                                    color: @primary-color;
+                                    margin: 8px 0 18px;
+                                    max-width: 632px;
+                                }
+
+                                .shop-btn {
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    line-height: 17px;
+                                    color: @secondary-color;
+                                    background-color: @primary-color;
+                                    padding: 14px 20px;
+                                    border-bottom: 5px solid @third-color;
+                                    margin-bottom: 36px;
+                                }
+                            }
+
+                            .sample-products {
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-right: -10px;
+                                margin-left: -88px;
+                                .products {
+                                    margin: 0 10px;
+                                    .prod-img {
+                                       a{
+                                        display: inline-block;
+                                        img{
+                                            height: 100%;
+                                        }
+                                       }
+                                    }
+
+                                    .name-price {
+                                        text-align: center;
+                                        max-width: 200px;
+                                        margin: 0 auto;
+                                        height: 20px;
+
+                                        .prod-name {
+                                            font-size: 16px;
+                                            line-height: 18px;
+                                            font-weight: bold;
+                                            margin-top: 10px;
+                                        }
+                                        .price{
+                                            font-family: @karla;
+                                            font-size: 20px;
+                                            font-weight: bold;
+                                            line-height: 30px;
+                                            color: @third-color;
+                                        }
+                                        .price:has(>.org-price){
+                                            color: red;
+                                            .org-price{
+                                                margin-right: 8px;
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            .item-2 {
+                background-color: #FFF5D9;
+                .item-container{
+                    .item-wrapper {
+                        flex-direction: row-reverse;
+                       .item-right{
+                        position: relative;
+                        .sample-products {
+                            margin: 0 -10px;
+                        }
+                       }
+                       .item-left{
+                        margin-left: -55px;
+                    }
+                    }
+                }
+            }
+        }
+
+        .products-by-type {
+            max-width: 1037px;
+            margin: 0 auto 100px;
+
+            .type-heading {
+                text-align: center;
+                margin-bottom: 29px;
+            }
+
+            .type-wrapper {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 100px;
+                margin: -16px;
+
+                .item {
+                    margin: 15px;
+                    height: 193px;
+                    width: 148px;
+
+                    a {
+                        display: inline-block;
+                        height: 193px;
+
+                        .item-img {
+                            max-width: 148px;
+                            max-height: 148px;
+
+                            img {
+                                border: 3px solid transparent;
+                            }
+                        }
+
+                        .item-category {
+                            position: relative;
+                            z-index: -1;
+                            height: 82px;
+                            width: 175px;
+                            background-color: transparent;
+                            bottom: 37px;
+                            left: -13.5px;
+                            padding-top: 30px;
+
+                            p {
+                                text-align: center;
+                                font-size: 16px;
+                                font-family: @raleway;
+                                font-weight: bold;
+                                line-height: 57px;
+                                color: @primary-color;
+                            }
+                        }
+                    }
+                }
+                .item:hover {
+                    .item-img {
+                        img {
+                            border: 3px solid @third-color;
+                        }
+                    }
+
+                    .item-category {
+                        background-color: @primary-color;
+
+                        p {
+                            color: @secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .store-description {
+            max-width: 1262px;
+            margin: 0 auto;
+            @media screen and (max-width:1366px){
+                max-width:1090px;
+            }
+            .store-container {
+                margin: -12.4px 0;
+
+                &>p {
+                    margin: 12.4px 0;
+                    font-size: 14px;
+                    font-family: @karla;
+                    line-height: 19px;
+                    color: @primary-color;
+                }
+            }
+
+            .trend-items {
+                max-width: 1409px;
+                margin: 44px auto 38px;
+
+                .trend-wrapper {
+                    align-items: center;
+                    margin: 0 -11px;
+                    justify-content: center;
+
+                    .heading {
+                        font-size: 17px;
+                        font-family: @raleway;
+                        line-height: 22px;
+                        color: @primary-color;
+                        margin-right: 20px;
+                    }
+
+                    &>div {
+                        margin: 0 11px;
+                        max-width: 54px;
+                    }
                 }
             }
         }
@@ -301,6 +573,7 @@ input {
                         }
 
                         .email-btn {
+                            cursor: pointer;
                             width: 42px;
                             height: 40px;
                             background-color: @third-color;
@@ -321,19 +594,21 @@ input {
                         padding-bottom: 50px;
                         border-bottom: 1px solid #707070;
                         justify-content: space-between;
-                        .inner-columns{
+
+                        .inner-columns {
                             justify-content: space-between;
                             width: 70%;
+
                             .column {
                                 .footer-links-styles
                             }
-    
+
                             .column.social-media-links {
                                 margin-top: 23px;
-    
+
                                 ul {
                                     margin-top: 7px;
-    
+
                                     li {
                                         margin: 0 3.5px;
                                     }
@@ -352,15 +627,17 @@ input {
 
                                 .txt-content {
                                     color: @primary-color;
+
                                     p {
                                         font-size: 14px;
                                         font-weight: bold;
                                         font-family: @raleway;
                                     }
-                                    span{
+
+                                    span {
                                         font-size: 10px;
                                         font-family: @karla;
-                                    } 
+                                    }
                                 }
                             }
 
