@@ -13,6 +13,9 @@
     <!-- google icons link -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Home page</title>
 </head>
@@ -22,10 +25,10 @@
         <header class="header">
             <div class="header-container">
                 <div class="header-wrapper flex">
-                    <div class="hamburg-icon">
-                        <a href="">
-                            <img src="images/header/hamurg-icon.png" alt="menu-icon">
-                        </a>
+                    <div class="tab-menu">
+                        <button>
+                            <span class="material-symbols-outlined hamburg-icon">menu</span>
+                        </button>
                     </div>
                     <div class="logo">
                         <a href="">
@@ -96,26 +99,39 @@
                 </div>
             </section>
             <section class="carousel">
-            <!-- carousel goes here -->
+                <!-- carousel goes here -->
             </section>
             <section class="featured-products">
-                <div class="column item-1">
+                <div class="row item-1">
                     <div class="item-container">
                         <div class="item-wrapper flex">
-                            <div class="item-left product-full-img">
-                                <img src="images/featured/featured-product-full.jpg" alt="featured-product-full-image">
+                            <div class="item-left">
+                                <div class="product-full-img">
+                                    <img src="images/featured/featured-product-full.jpg" alt="star starWars">
+                                </div>
+                                <div class="desktop-desc">
+                                    <div class="description">
+                                        <h3 class="heading">FEATURED BATMAN</h3>
+                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit
+                                            amet enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.
+                                        </p>
+                                        <a href="" class="shop-btn">SHOP ALL BATMAN</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="item-right">
                                 <div class="description">
                                     <h3 class="heading">FEATURED BATMAN</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.</p>
+                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet
+                                        enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.</p>
                                     <a href="" class="shop-btn">SHOP ALL BATMAN</a>
                                 </div>
                                 <div class="sample-products flex">
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Batman Stern Stare Shirt.jpg" alt="batman stern">
+                                                <img src="images/featured/Batman Stern Stare Shirt.jpg"
+                                                    alt="batman stern">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -126,7 +142,8 @@
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Batman Face Neck Gaiter.jpg" alt="batman face">
+                                                <img src="images/featured/Batman Face Neck Gaiter.jpg"
+                                                    alt="batman face">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -137,7 +154,8 @@
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Batman Name Comic Charm Lanyard.jpg" alt="batman name">
+                                                <img src="images/featured/Batman Name Comic Charm Lanyard.jpg"
+                                                    alt="batman name">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -150,23 +168,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="column item-2">
+                <div class="row item-2">
                     <div class="item-container">
                         <div class="item-wrapper flex">
-                            <div class="item-left product-full-img">
-                                <img src="images/featured/starWars.jpg" alt="star starWars">
+                            <div class="item-left">
+                                <div class="product-full-img">
+                                    <img src="images/featured/starWars.jpg" alt="star starWars">
+                                </div>
+                                <div class="desktop-desc">
+                                    <div class="description">
+                                        <h3 class="heading">FEATURED BATMAN</h3>
+                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit
+                                            amet enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.
+                                        </p>
+                                        <a href="" class="shop-btn">SHOP ALL BATMAN</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="item-right">
                                 <div class="description">
                                     <h3 class="heading">FEATURED BATMAN</h3>
-                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.</p>
+                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet
+                                        enim fermentum, ultricies felis id, scelerisque sapien. Duis sed quam.</p>
                                     <a href="" class="shop-btn">SHOP ALL BATMAN</a>
                                 </div>
                                 <div class="sample-products flex">
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Star Wars Darth Maul Portrait T-Shirt.jpg" alt="batman stern">
+                                                <img src="images/featured/Star Wars Darth Maul Portrait T-Shirt.jpg"
+                                                    alt="batman stern">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -177,7 +208,8 @@
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Star Wars Empire Movie Logo T-Shirt.jpg" alt="batman face">
+                                                <img src="images/featured/Star Wars Empire Movie Logo T-Shirt.jpg"
+                                                    alt="batman face">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -188,7 +220,8 @@
                                     <div class="products">
                                         <div class="prod-img">
                                             <a href="">
-                                                <img src="images/featured/Star Wars Stylin Live Ep103 Gift Set.jpg" alt="batman name">
+                                                <img src="images/featured/Star Wars Stylin Live Ep103 Gift Set.jpg"
+                                                    alt="batman name">
                                             </a>
                                         </div>
                                         <div class="name-price">
@@ -216,113 +249,113 @@
                         </a>
                     </div>
                     <div class="item">
-                       <a href="">
-                        <div class="item-img">
-                            <img src="images/product-by-type/APPAREL.jpg" alt="APPAREL">
-                        </div>
-                        <div class="item-category">
-                            <p>APPAREL</p>
-                        </div>
-                       </a>
-                    </div>
-                    <div class="item">
-                       <a href="">
-                         <div class="item-img">
-                            <img src="images/product-by-type/BAGS.jpg" alt="bags">
-                        </div>
-                        <div class="item-category">
-                            <p>BAGS</p>
-                        </div>
-                       </a>
-                    </div>
-                    <div class="item">
-                       <a href="">
-                         <div class="item-img">
-                            <img src="images/product-by-type/COLLECTIBLES.jpg" alt="collectable">
-                        </div>
-                        <div class="item-category">
-                            <p>COLLECTIBLES</p>
-                        </div>
-                       </a>
-                    </div>
-                    <div class="item">
-                       <a href="">
-                         <div class="item-img">
-                            <img src="images/product-by-type/COSTUMES.jpg" alt="COSTUME">
-                        </div>
-                        <div class="item-category">
-                            <p>COSTUMES</p>
-                        </div>
-                       </a>
-                    </div>
-                    <div class="item">
-                       <a href="">
-                         <div class="item-img">
-                            <img src="images/product-by-type/GLASSWARE.jpg" alt="GLASSWARE">
-                        </div>
-                        <div class="item-category">
-                            <p>GLASSWARE</p>
-                        </div>
-                       </a>
-                    </div>
-                    <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/HATS.png" alt="hats">
-                         </div>
-                         <div class="item-category">
-                             <p>HATS</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/APPAREL.jpg" alt="APPAREL">
+                            </div>
+                            <div class="item-category">
+                                <p>APPAREL</p>
+                            </div>
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/HOODIES.jpg" alt="hoodies">
-                         </div>
-                         <div class="item-category">
-                             <p>HOODIES</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/BAGS.jpg" alt="bags">
+                            </div>
+                            <div class="item-category">
+                                <p>BAGS</p>
+                            </div>
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/HOUSEWEARS.jpg" alt="housewears">
-                         </div>
-                         <div class="item-category">
-                             <p>HOUSEWEARS</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/COLLECTIBLES.jpg" alt="collectable">
+                            </div>
+                            <div class="item-category">
+                                <p>COLLECTIBLES</p>
+                            </div>
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/JEWELRY.jpg" alt="jewelry">
-                         </div>
-                         <div class="item-category">
-                             <p>JEWELRY</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/COSTUMES.jpg" alt="COSTUME">
+                            </div>
+                            <div class="item-category">
+                                <p>COSTUMES</p>
+                            </div>
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/SHIRTS.jpg" alt="Shirt">
-                         </div>
-                         <div class="item-category">
-                             <p>SHIRTS</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/GLASSWARE.jpg" alt="GLASSWARE">
+                            </div>
+                            <div class="item-category">
+                                <p>GLASSWARE</p>
+                            </div>
                         </a>
                     </div>
                     <div class="item">
                         <a href="">
-                          <div class="item-img">
-                             <img src="images/product-by-type/SLEEPWEAR.jpg" alt="sleepwear">
-                         </div>
-                         <div class="item-category">
-                             <p>SLEEPWEAR</p>
-                         </div>
+                            <div class="item-img">
+                                <img src="images/product-by-type/HATS.png" alt="hats">
+                            </div>
+                            <div class="item-category">
+                                <p>HATS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="item-img">
+                                <img src="images/product-by-type/HOODIES.jpg" alt="hoodies">
+                            </div>
+                            <div class="item-category">
+                                <p>HOODIES</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="item-img">
+                                <img src="images/product-by-type/HOUSEWEARS.jpg" alt="housewears">
+                            </div>
+                            <div class="item-category">
+                                <p>HOUSEWEARS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="item-img">
+                                <img src="images/product-by-type/JEWELRY.jpg" alt="jewelry">
+                            </div>
+                            <div class="item-category">
+                                <p>JEWELRY</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="item-img">
+                                <img src="images/product-by-type/SHIRTS.jpg" alt="Shirt">
+                            </div>
+                            <div class="item-category">
+                                <p>SHIRTS</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="">
+                            <div class="item-img">
+                                <img src="images/product-by-type/SLEEPWEAR.jpg" alt="sleepwear">
+                            </div>
+                            <div class="item-category">
+                                <p>SLEEPWEAR</p>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -330,18 +363,32 @@
             <section class="store-description">
                 <div class="store-container">
                     <p class="row-1">
-                        From Star Wars to Steven Universe, Stylin Online is your superstore for apparel and accessories that proclaim your pop culture passions! Choose from thousands of designs related to your favorite superhero, movie, TV series, videogame, anime, cartoon character or products from Adventure Time to Zelda!
+                        From Star Wars to Steven Universe, Stylin Online is your superstore for apparel and accessories
+                        that proclaim your pop culture passions! Choose from thousands of designs related to your
+                        favorite superhero, movie, TV series, videogame, anime, cartoon character or products from
+                        Adventure Time to Zelda!
                     </p>
                     <p class="row-2">
-                        Our colorful and eye-catching t-shirts and tank tops are just the start: You can find your favorites in the form of hoodies, sweatshirts, jackets, hats, beanies, belts, belt buckles, socks, slippers, gloves, ear muffs, pajamas, scarves, lingerie, swimsuits, beach towels, costumes, wallets, backpacks, jewelry, flags, rugs, vinyl figurines, plush figures and more. Come on in, it’s like a gigantic candy store for every fanboy and fangirl!
+                        Our colorful and eye-catching t-shirts and tank tops are just the start: You can find your
+                        favorites in the form of hoodies, sweatshirts, jackets, hats, beanies, belts, belt buckles,
+                        socks, slippers, gloves, ear muffs, pajamas, scarves, lingerie, swimsuits, beach towels,
+                        costumes, wallets, backpacks, jewelry, flags, rugs, vinyl figurines, plush figures and more.
+                        Come on in, it’s like a gigantic candy store for every fanboy and fangirl!
                     </p>
                     <p class="row-3">
-                        It’s easy to search our website for what you want: Search for a specific character, movie, TV series or videogame, and by kid’s, men’s or women’s sizes. You can also search by standard or athletic fit, by color and by price range.
+                        It’s easy to search our website for what you want: Search for a specific character, movie, TV
+                        series or videogame, and by kid’s, men’s or women’s sizes. You can also search by standard or
+                        athletic fit, by color and by price range.
                     </p>
                     <p class="row-4">
-                        Whether you love Batman, Superman, Wonder Woman, Luke Skywalker, Mr. Spock, Captain America, the Avengers, Iron Man, Spider-Man or Spider-Gwen, Stylin Online can help you show it with style. Connect with us on social media for pop culture news, new product releases and special offers or to let us know what you’re craving!
+                        Whether you love Batman, Superman, Wonder Woman, Luke Skywalker, Mr. Spock, Captain America, the
+                        Avengers, Iron Man, Spider-Man or Spider-Gwen, Stylin Online can help you show it with style.
+                        Connect with us on social media for pop culture news, new product releases and special offers or
+                        to let us know what you’re craving!
                     </p>
                 </div>
+            </section>
+            <section class="trend-collection">
                 <div class="trend-items">
                     <div class="trend-wrapper flex">
                         <p class="heading">TRENDING:</p>
@@ -359,11 +406,12 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="container">
-                <div class="wrapper flex">
+            <div class="ftr-container">
+                <div class="ftr-wrapper flex">
                     <div class="get-email">
                         <p class="get-in-touch">GET IN ON <br>THE FUN!</p>
-                        <p class="sigup-txt"> Sign up for our free eNewsletter to receive <strong>special offers, new arrivals &
+                        <p class="sigup-txt"> Sign up for our free eNewsletter to receive <strong>special offers, new
+                                arrivals &
                                 more!</strong></p>
                         <div class="email-input flex">
                             <input class="email-input-box" type="text" placeholder="Enter Your Email Address">
@@ -378,8 +426,11 @@
                         <div class="column-wrapper flex">
                             <div class="inner-columns flex">
                                 <div class="column item-1">
-                                    <p class="footer-links-heading">HELP DESK</p>
-                                    <ul class="links-list">
+                                    <button class="heading ftr-link-btn flex footer-links-heading" data-target="1">
+                                        <span class="material-symbols-outlined plus-icon" data-target="1">add</span>
+                                        HELP DESK
+                                    </button>
+                                    <ul class="links-list ftr-links" data-target="1">
                                         <li><a href="">Contact Us</a></li>
                                         <li><a href="">Shipping Information</a></li>
                                         <li><a href="">Returns</a></li>
@@ -388,8 +439,11 @@
                                     </ul>
                                 </div>
                                 <div class="column item-2">
-                                    <p class="footer-links-heading">COMPANY</p>
-                                    <ul class="links-list">
+                                    <button class="heading ftr-link-btn flex footer-links-heading" data-target="2">
+                                        <span class="material-symbols-outlined plus-icon" data-target="2">add</span>
+                                        COMPANY
+                                    </button>
+                                    <ul class="links-list ftr-links" data-target="2">
                                         <li><a href="">About Us</a></li>
                                         <li><a href="">Blog</a></li>
                                         <li><a href="">FAQs</a></li>
@@ -399,16 +453,21 @@
                                     </ul>
                                 </div>
                                 <div class="column item-3">
-                                    <p class="footer-links-heading">MY ACCOUNT</p>
-                                    <ul class="links-list">
+                                    <button class="heading ftr-link-btn flex footer-links-heading" data-target="3">
+                                        <span class="material-symbols-outlined plus-icon" data-target="3">add</span>
+                                        MY ACCOUNT
+                                    </button>
+                                    <ul class="links-list ftr-links" data-target="3">
                                         <li><a href="">View Shopping Cart</a></li>
                                         <li><a href="">Sign In or Register</a></li>
                                     </ul>
                                     <div class="column social-media-links">
-                                        <p class="footer-links-heading">FOLLOW US ON SOCIAL</p>
+                                        <p class="footer-links-heading social">FOLLOW US ON SOCIAL</p>
                                         <ul class="flex">
-                                            <li><a href=""><img src="images/footer/facebook.svg" alt="facebook link"></a></li>
-                                            <li><a href=""><img src="images/footer/pintrest.svg" alt="pintrest link"></a></li>
+                                            <li><a href=""><img src="images/footer/facebook.svg"
+                                                        alt="facebook link"></a></li>
+                                            <li><a href=""><img src="images/footer/pintrest.svg"
+                                                        alt="pintrest link"></a></li>
                                         </ul>
                                     </div>
                                 </div>

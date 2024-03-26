@@ -48,6 +48,14 @@ input {
 }
 
 .main-container {
+    @media screen and (max-width:1366px) {
+        max-width: 1366px;
+    }
+
+    @media screen and (max-width:1024px) {
+        max-width: 1024px;
+    }
+
     .header {
         box-shadow: 0 0 10px #1b1c2010;
         position: sticky;
@@ -64,24 +72,61 @@ input {
                 justify-content: space-between;
                 align-items: center;
 
-                @media screen and (max-width:1024px){
-                    max-width: 960px;
+                @media screen and (max-width:1280px) {
+                    padding: 0 32px;
                 }
-                .hamburg-icon {
+
+                @media screen and (max-width:768px) {
+                    flex-wrap: wrap;
+                    max-height: none;
+                    padding-bottom: 8px;
+                }
+
+                @media screen and(max-width:698px) {
+                    padding: 0 35px;
+                }
+
+                .tab-menu {
                     display: none;
+
+                    button {
+                        background: transparent;
+                        border: none;
+
+                        .hamburg-icon {
+                            font-size: xxx-large;
+                            font-weight: 600;
+                            cursor: pointer;
+                            color: @secondary-color;
+                        }
+                    }
 
                     @media screen and (max-width:768px) {
                         display: block;
+
+
                     }
                 }
 
                 .logo {
                     max-width: 148px;
                     margin: 13px 0;
+
+                    @media screen and (max-width:768px) {
+                        max-width: 100px;
+                        margin: 12px 0 6px;
+                    }
                 }
 
                 .search-bar {
                     align-items: center;
+
+                    @media screen and (max-width:768px) {
+                        order: 4;
+                        width: 100%;
+                        padding-bottom: 8px;
+
+                    }
 
                     .glob-search {
                         width: 466px;
@@ -95,6 +140,24 @@ input {
                         font-weight: bold;
                         font-style: italic;
                         color: #8C8989;
+
+                        @media screen and (max-width:1024px) {
+                            width: 435px;
+                            padding: 0;
+                        }
+
+                        @media screen and (max-width:1024px) {
+                            width: auto;
+                            padding: 0;
+                        }
+
+                        @media screen and (max-width:768px) {
+                            width: 100%;
+
+                            &::placeholder {
+                                text-align: center;
+                            }
+                        }
                     }
 
                     .search-icon {
@@ -104,14 +167,29 @@ input {
                         width: 42px;
                         background-color: @third-color;
 
+                        @media screen and(max-width:768px) {
+                            justify-content: flex-start;
+                            background-color: @primary-color;
+                        }
+
                         span {
                             color: @primary-color;
                             font-weight: 600;
+
+                            @media screen and(max-width:768px) {
+                                color: @third-color;
+                                font-weight: 400;
+                                font-size: 28px;
+                            }
                         }
                     }
                 }
 
                 .free-shipping-txt {
+                    @media screen and (max-width:858px) {
+                        display: none;
+                    }
+
                     p {
                         font-size: 17px;
                         font-family: @raleway;
@@ -135,11 +213,20 @@ input {
 
                         .account {
                             margin-right: 20px;
+
+                            @media screen and (max-width:768px) {
+                                display: none;
+                            }
                         }
 
                         .cart {
                             position: relative;
                             top: -7px;
+
+                            @media screen and (max-width:768px) {
+                                top: 4px;
+
+                            }
 
                             a {
                                 position: relative;
@@ -149,6 +236,11 @@ input {
                                 height: 67px;
                                 width: 56px;
                                 justify-content: center;
+
+                                @media screen and (max-width:768px) {
+                                    height: 50px;
+                                    width: $height;
+                                }
 
                                 .material-symbols-outlined {
                                     font-variation-settings:
@@ -166,8 +258,8 @@ input {
 
                                 .cart-count {
                                     position: absolute;
-                                    top: 12px;
-                                    right: 8px;
+                                    top: 15%;
+                                    right: 15%;
                                     font-size: 13px;
                                     font-family: "Karla", sans-serifl;
                                     font-weight: bold;
@@ -192,14 +284,27 @@ input {
             background-color: #EFEFEF;
             box-shadow: 0px 3px 20px #00000030;
 
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+
             .nav-wrapper {
                 max-width: 1208px;
                 margin: 0 auto;
                 justify-content: space-between;
                 align-items: center;
-                @media screen and (max-width:1024px){
-                    max-width: 948px;
+
+                @media screen and (max-width:1024px) {
+                    padding: 0 38px;
                 }
+
+                @media screen and (max-width:768px) {
+                    display: block;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    width: 100%;
+                }
+
                 li {
                     a {
                         padding: 11px 0;
@@ -207,11 +312,16 @@ input {
                         font-size: 17px;
                         font-family: @raleway;
                         color: @primary-color;
+
+                        @media screen and (max-width:1024px) {
+                            font-size: 15px;
+                        }
                     }
                 }
 
                 li:not(:last-child) {
                     position: relative;
+
                     &:after {
                         content: "";
                         background-color: black;
@@ -221,6 +331,10 @@ input {
                         position: absolute;
                         top: 45%;
                         right: -25px;
+
+                        @media screen and (max-width:768px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -236,10 +350,20 @@ input {
     }
 
     .inner-container {
+
+        // section-1
         .hompage-banner {
             .banner1 {
                 max-width: 1644px;
                 margin: 10px auto;
+
+                @media screen and (max-width:1440px) {
+                    max-width: 1140px;
+                }
+
+                @media screen and (max-width:1024px) {
+                    padding: 0 50px;
+                }
             }
 
             .banner2 {
@@ -247,6 +371,13 @@ input {
                 margin: 0 auto;
                 padding-top: 24px;
                 padding-bottom: 54px;
+
+                @media screen and (max-width:1024px) {
+                    padding-right: 140px;
+                    padding-left: 140px;
+                    padding-top: 30px;
+                    padding-bottom: 40px;
+                }
 
                 .banner-wrapper {
                     margin: 0 -10px;
@@ -258,12 +389,64 @@ input {
             }
         }
 
+        // section-2
         .carousel {}
 
+        // featured product component
+        .description-componenet {
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+
+            .heading {
+                font-size: 30px;
+                font-family: @raleway;
+                line-height: 32px;
+                color: @primary-color;
+                font-weight: 800;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 23px;
+                }
+            }
+
+            .desc {
+                font-size: 18px;
+                font-family: @karla;
+                line-height: 24px;
+                color: @primary-color;
+                margin: 8px 0 18px;
+                max-width: 632px;
+
+                @media screen and (max-width:1024px) {
+                    max-width: 100%;
+                }
+            }
+
+            .shop-btn {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 17px;
+                color: @secondary-color;
+                background-color: @primary-color;
+                padding: 14px 20px;
+                border-bottom: 5px solid @third-color;
+                margin-bottom: 36px;
+
+                @media screen and (max-width:1024px) {
+                    font-size: 11px;
+                    padding: 9px 15px;
+                    margin: 0;
+                }
+            }
+        }
+
+        // section-3
         .featured-products {
             margin: 40px 0 57px;
 
-            .column {
+            .row {
                 background-color: #EFEFEF;
 
                 .item-container {
@@ -271,47 +454,57 @@ input {
                     margin: 0 auto;
                     padding: 50px 0;
 
+                    @media screen and (max-width:1024px) {
+                        padding: 40px 170px;
+                    }
+
                     .item-wrapper {
                         margin: 0 -27px;
 
+                        @media screen and (max-width:1024px) {
+                            display: block;
+                            margin: 0;
+                        }
+
                         &>div {
                             margin: 0 27px;
+
+                            @media screen and (max-width:1024px) {
+                                margin: 0;
+                            }
                         }
-                        .item-left{
-                            width: 450px;
-                            height: 580px;  
+
+                        .item-left {
+                            @media screen and (max-width:1024px) {
+                                display: flex;
+                            }
+
+                            .product-full-img {
+                                width: 450px;
+                                height: 580px;
+
+                                @media screen and (max-width:1024px) {
+                                    height: 100%;
+                                    width: 100%;
+                                    margin-right: 30px;
+                                }
+                            }
+
+                            .desktop-desc {
+                                display: none;
+                                .description-componenet;
+
+                                @media screen and (max-width:1024px) {
+                                    display: block;
+                                }
+                            }
                         }
+
                         .item-right {
                             padding: 28px 0 18px;
 
                             .description {
-                                .heading {
-                                    font-size: 30px;
-                                    font-family: @raleway;
-                                    line-height: 32px;
-                                    color: @primary-color;
-                                }
-
-                                .desc {
-                                    font-size: 18px;
-                                    font-family: @karla;
-                                    line-height: 24px;
-                                    color: @primary-color;
-                                    margin: 8px 0 18px;
-                                    max-width: 632px;
-                                }
-
-                                .shop-btn {
-                                    display: inline-block;
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                    line-height: 17px;
-                                    color: @secondary-color;
-                                    background-color: @primary-color;
-                                    padding: 14px 20px;
-                                    border-bottom: 5px solid @third-color;
-                                    margin-bottom: 36px;
-                                }
+                                .description-componenet;
                             }
 
                             .sample-products {
@@ -319,15 +512,31 @@ input {
                                 justify-content: space-between;
                                 margin-right: -10px;
                                 margin-left: -88px;
+
+                                @media screen and (max-width:1024px) {
+                                    margin: 0;
+                                }
+
                                 .products {
                                     margin: 0 10px;
+
+                                    @media screen and (max-width:1024px) {
+                                        margin: 0;
+                                    }
+
                                     .prod-img {
-                                       a{
-                                        display: inline-block;
-                                        img{
-                                            height: 100%;
+                                        a {
+                                            display: inline-block;
+
+                                            @media screen and (max-width:1024px) {
+                                                max-height: 248px;
+                                                max-width: 216px;
+                                            }
+
+                                            img {
+                                                height: 100%;
+                                            }
                                         }
-                                       }
                                     }
 
                                     .name-price {
@@ -336,22 +545,29 @@ input {
                                         margin: 0 auto;
                                         height: 20px;
 
+                                        @media screen and (max-width:1024px) {
+                                            height: 45px;
+                                        }
+
                                         .prod-name {
                                             font-size: 16px;
                                             line-height: 18px;
                                             font-weight: bold;
                                             margin-top: 10px;
                                         }
-                                        .price{
+
+                                        .price {
                                             font-family: @karla;
                                             font-size: 20px;
                                             font-weight: bold;
                                             line-height: 30px;
                                             color: @third-color;
                                         }
-                                        .price:has(>.org-price){
+
+                                        .price:has(>.org-price) {
                                             color: red;
-                                            .org-price{
+
+                                            .org-price {
                                                 margin-right: 8px;
                                                 color: grey;
                                             }
@@ -364,28 +580,47 @@ input {
                     }
                 }
             }
+
             .item-2 {
                 background-color: #FFF5D9;
-                .item-container{
+
+                .item-container {
                     .item-wrapper {
                         flex-direction: row-reverse;
-                       .item-right{
-                        position: relative;
-                        .sample-products {
-                            margin: 0 -10px;
+
+                        .item-right {
+                            position: relative;
+
+                            .sample-products {
+                                margin: 0 -10px;
+
+                                @media screen and (max-width:1024px) {
+                                    margin: 0;
+                                }
+                            }
                         }
-                       }
-                       .item-left{
-                        margin-left: -55px;
-                    }
+
+                        .item-left {
+                            margin-left: -55px;
+
+                            @media screen and (max-width:1024px) {
+                                flex-direction: row-reverse;
+                                margin: 0;
+                            }
+                        }
                     }
                 }
             }
         }
 
+        // section-4
         .products-by-type {
             max-width: 1037px;
             margin: 0 auto 100px;
+
+            @media screen and (max-width:1024px) {
+                padding: 0 170px;
+            }
 
             .type-heading {
                 text-align: center;
@@ -437,6 +672,7 @@ input {
                         }
                     }
                 }
+
                 .item:hover {
                     .item-img {
                         img {
@@ -455,12 +691,19 @@ input {
             }
         }
 
+        // section-5
         .store-description {
             max-width: 1262px;
             margin: 0 auto;
-            @media screen and (max-width:1366px){
-                max-width:1090px;
+
+            @media screen and (max-width:1366px) {
+                padding: 0 138px;
             }
+
+            @media screen and (max-width:1024px) {
+                padding: 0 112px;
+            }
+
             .store-container {
                 margin: -12.4px 0;
 
@@ -472,15 +715,26 @@ input {
                     color: @primary-color;
                 }
             }
+        }
 
+        // section-6
+        .trend-collection {
             .trend-items {
                 max-width: 1409px;
                 margin: 44px auto 38px;
+
+                @media screen and (max-width:1024px) {
+                    padding: 0 47px;
+                }
 
                 .trend-wrapper {
                     align-items: center;
                     margin: 0 -11px;
                     justify-content: center;
+
+                    @media screen and (max-width:1024px) {
+                        justify-content: space-between;
+                    }
 
                     .heading {
                         font-size: 17px;
@@ -499,6 +753,7 @@ input {
         }
     }
 
+    // footer component-1
     .font-properties {
         font-size: 13px;
         font-family: @karla;
@@ -506,6 +761,7 @@ input {
         color: @secondary-color;
     }
 
+    // footer component-2
     .footer-links-styles {
         .footer-links-heading {
             font-size: 14px;
@@ -513,9 +769,44 @@ input {
             font-weight: bold;
             line-height: 19px;
             color: @primary-color;
+            border: none;
+            background-color: transparent;
+
+            span {
+                display: none;
+
+                @media screen and (max-width:1024px) {
+                    display: block;
+                    font-size: 18px;
+                    height: 18px;
+                    width: 18px;
+                    text-align: center;
+                    color: @third-color;
+                    background-color: @primary-color;
+                    margin-right: 6px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            @media screen and (max-width:1024px) {
+                cursor: pointer;
+            }
+
+        }
+
+        .footer-links-heading.social {
+            @media screen and (max-width:1024px) {
+                margin-bottom: 7px;
+            }
         }
 
         .links-list {
+            @media screen and (min-width:1025px) {
+                display: block;
+            }
+
             li {
                 a {
                     appearance: none;
@@ -530,15 +821,19 @@ input {
     }
 
     .footer {
-        .container {
+        .ftr-container {
             background-color: #F5F5F5;
             margin-top: 40px;
 
-            .wrapper {
+            .ftr-wrapper {
                 max-width: 1090px;
                 margin: 0 auto;
                 justify-content: space-between;
                 padding: 30px 0;
+
+                @media screen and (max-width:1024px) {
+                    padding: 30px 164px;
+                }
 
                 .get-email {
                     .get-in-touch {
@@ -590,17 +885,41 @@ input {
                     max-width: 69.08%;
                     width: 100%;
 
+                    @media screen and (max-width:1024px) {
+                        max-width: 54%;
+                    }
+
                     .column-wrapper {
                         padding-bottom: 50px;
                         border-bottom: 1px solid #707070;
                         justify-content: space-between;
 
+                        @media screen and (max-width:1024px) {
+                            padding-bottom: 18px;
+                        }
+
                         .inner-columns {
                             justify-content: space-between;
                             width: 70%;
 
+                            @media screen and (max-width:1024px) {
+                                flex-direction: column;
+                                width: 50%;
+                            }
+
                             .column {
-                                .footer-links-styles
+                                .footer-links-styles;
+
+                                @media screen and (max-width:1024px) {
+                                    margin-bottom: 17px;
+                                }
+
+                                .links-list {
+                                    @media screen and (max-width:1024px) {
+                                        display: none;
+                                        margin-left: 23px;
+                                    }
+                                }
                             }
 
                             .column.social-media-links {
