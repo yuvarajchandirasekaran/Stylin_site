@@ -13,7 +13,6 @@ $(document).ready(function() {
     }
   });
 });
-
   // mobile menu
   $('.hamburg-icon').click(function () {
     if ($('.hamburg-icon').text() === 'menu') {
@@ -23,23 +22,19 @@ $(document).ready(function() {
     else if($('.hamburg-icon').text() === 'close') {
       $('.hamburg-icon').text('menu');
       $('.nav-links').hide()
-
     }
   })
-
   // model-pop-up
   $(document).ready(function() {
     if ($(window).width() > 1000) {
     $('.modal-pop-up').css('display', 'block');
     document.body.style.overflow = 'hidden';
-
     $('.form-close-btn').click(function(e) {
         $('.modal-pop-up').css('display', 'none');
         document.body.style.overflow = 'auto';
     });
   }
 });
-
 // carousel-1
 $(document).ready(function(){
   $('.carousel-wrapper').slick({
@@ -83,14 +78,4 @@ $(document).ready(function(){
     ]
   });
 });
-
 // featured products tab view carousel
-
-
-
-
-
-
-
-
-
