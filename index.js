@@ -79,3 +79,47 @@ $(document).ready(function(){
   });
 });
 // featured products tab view carousel
+$(document).ready(function(){
+  $('.featured-carousel').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    draggable:false,
+    autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+    nextArrow: '<button type="button" class="slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
+  });
+});
+
+
+$(document).ready(function(){
+  $('.featured-carousel-2').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    draggable:false,
+    autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+    nextArrow: '<button type="button" class="slick-next">Next</button>',
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
+  });
+});
