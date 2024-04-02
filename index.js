@@ -101,7 +101,6 @@ $(document).ready(function(){
   });
 });
 
-
 $(document).ready(function(){
   $('.featured-carousel-2').slick({
     slidesToShow: 2,

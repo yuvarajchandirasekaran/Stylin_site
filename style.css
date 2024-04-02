@@ -281,8 +281,9 @@ input:focus {
     max-width: 100%;
     width: 100%;
     padding: 30px;
-    height: 80vh;
+    height: 85vh;
     overflow: scroll;
+    z-index: 999;
   }
 }
 .main-container .header .nav-links .nav-wrapper li .tab-arrow {
@@ -887,7 +888,6 @@ input:focus {
   width: 44px;
 }
 .main-container .inner-container .featured-products .row .item-container .item-wrapper .item-right .featured-carousel .slick-prev {
-  z-index: 99;
   left: -19px;
 }
 .main-container .inner-container .featured-products .row .item-container .item-wrapper .item-right .featured-carousel .slick-prev:before,
@@ -985,7 +985,6 @@ input:focus {
   width: 44px;
 }
 .main-container .inner-container .featured-products .row .item-container .item-wrapper .item-right .featured-carousel-2 .slick-prev {
-  z-index: 99;
   left: -19px;
 }
 .main-container .inner-container .featured-products .row .item-container .item-wrapper .item-right .featured-carousel-2 .slick-prev:before,
@@ -1329,6 +1328,8 @@ input:focus {
   position: relative;
 }
 .main-container .inner-container .modal-pop-up .overlay .modal-wrapper .form-close-btn {
+  background-color: transparent;
+  border: none;
   max-width: 36px;
   max-height: 36px;
   position: absolute;
